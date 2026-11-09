@@ -1,5 +1,8 @@
 # 佰川纳海，积微知化（project-019）
 
+线上：<https://mlwqi.github.io/bai-chuan-na-hai/>  
+仓库：<https://github.com/mlwqi/bai-chuan-na-hai>
+
 ## 目标
 
 以知识库为基，提取、归纳其中某个方面，展开叙述。首页是主题目录；每个主题从原典出发，先摘文句，再结合上下文释义，最后归入部类。
@@ -52,4 +55,12 @@ docs/
 
 ## 发布
 
-尚未部署。按 project-017 的做法，只发布 `public/` 到 GitHub Pages；部署前需确认。
+已部署到 GitHub Pages：<https://mlwqi.github.io/bai-chuan-na-hai/>
+
+推送 `main` 会触发 `.github/workflows/pages.yml`，只发布 `public/`。首次部署后若 Actions 被取消，先启用 Pages（`build_type=workflow`）再手动触发 workflow。
+
+后续新增/补充主题使用 skill `bai-chuan-na-hai`；其验证脚本：
+
+```bash
+python "C:/Users/User/.claude/skills/bai-chuan-na-hai/scripts/verify_site.py" "D:/Claude-workspace/project-019-佰川纳海"
+```

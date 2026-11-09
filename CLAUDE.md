@@ -1,5 +1,8 @@
 # 项目约定
 
+线上：<https://mlwqi.github.io/bai-chuan-na-hai/>  
+仓库：<https://github.com/mlwqi/bai-chuan-na-hai>
+
 ## 定位
 
 「佰川纳海，积微知化」是一个主题汇编静态站：以知识库为基，提取、归纳某一主题，展开叙述。首页是主题目录，阅读页逐条呈现原文、出处、释义。
@@ -36,4 +39,13 @@ python -m http.server 8766 --directory public
 
 ## 发布
 
-只发布 `public/`。发布/部署属于外部动作，必须先取得用户确认。
+只发布 `public/`。推送 `main` 触发 `.github/workflows/pages.yml`；发布/部署属于外部动作，用户未明确要求时先本地验证。
+
+本机 `git push` 可能被 Git Credential Manager 阻塞，必须清空 helper 后用 gh：
+
+```bash
+GIT_TERMINAL_PROMPT=0 GCM_INTERACTIVE=never \
+  git -c credential.helper= -c credential.helper="!gh auth git-credential" push origin main
+```
+
+后续新增/补充主题使用 skill `bai-chuan-na-hai`，并用其 `scripts/verify_site.py` 校验。
