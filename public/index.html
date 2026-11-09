@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="paper">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="佰川纳海，积微知化：以知识库为基，提取、归纳某一主题，展开叙述。"
+    />
+    <title>佰川纳海，积微知化</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="返回主题目录">
+        <span class="brand-main">佰川纳海</span>
+        <span class="brand-sub">积微知化</span>
+      </a>
+      <div class="top-actions">
+        <button class="ghost-btn toc-toggle" id="toc-toggle" type="button" hidden>
+          目录
+        </button>
+        <a class="back-btn" id="back-btn" href="#/" aria-label="返回主题目录" title="返回主题目录" hidden>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <div class="theme-switch" id="theme-switch" role="group" aria-label="阅读模式">
+          <button type="button" data-theme-opt="paper" aria-pressed="true">纸白</button>
+          <button type="button" data-theme-opt="eye" aria-pressed="false">护眼</button>
+          <button type="button" data-theme-opt="night" aria-pressed="false">夜间</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" class="app" aria-live="polite">
+      <div class="loading">正在加载……</div>
+    </main>
+
+    <footer class="footer">
+      <p>佰川纳海，积微知化 · 以知识库为基，提取、归纳，展开叙述。</p>
+      <p>内容来自公开大藏经等语料，仅供学习参考；引文可回查，释义为二次撰写。</p>
+    </footer>
+
+    <button class="backtop" id="backtop" type="button" aria-label="返回顶部" hidden>↑</button>
+
+    <noscript>
+      <p class="noscript">本站需要 JavaScript 才能浏览主题目录与文句。</p>
+    </noscript>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
