@@ -95,6 +95,7 @@ def main():
         out = os.path.join(OUT_DIR, "topics", topic["id"] + ".json")
         json.dump(data, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
         item = {k: topic.get(k, "") for k in ("id", "title", "subtitle", "summary", "tags", "updated")}
+        item["title"] = title  # 目录名以 Markdown H1 为准，避免两处标题漂移
         item.update(stats)
         catalog["topics"].append(item)
         print(f"{topic['id']}: {stats['sectionCount']} 部类 / {stats['textCount']} 部 / "
